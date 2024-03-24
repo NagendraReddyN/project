@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            #box{
+                height:200px;
+                width:300px;
+                position:relative;
+                top:100px;
+                left:600px;
+                background-color:bisque;
+            }
+            h1{
+                text-align:center;
+                color:blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+            <div>
+                <div>
+                    <h1>Calculator Application</h1>
+                </div>
+                <div id="box">
+                    <form action="" method="post" onsubmit = "return ValidateData()">
+                        {% csrf_token %}
+                        <input type="text" id='t1' name="t1"><br><br>
+                        <input type="text" id='t2' name="t2"><br><br>
+
+                        <input type="submit" name="add" value="Addition">
+                        <input type="submit" name="sub" value="Subtract">
+                        <input type="submit" name="div" value="Division">
+                        <input type="submit" name="mul" value="Multiply">
+                    </form>
+                </div>
+            </div>
+
+            <script>
+                function ValidateData(){
+                    var n1=document.getElementById('t1').value;
+                    var n2=document.getElementById('t2').value;
+
+                    if (n1<0 || n2<0){
+                        return false;
+                    }
+                    else{
+                        return true
+                    }
+                }
+            </script>
+        </body>
+</html>

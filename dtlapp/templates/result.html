@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <title> Result</title>
+        <style>
+            body{
+                background-color:pink;
+            }
+            h1{
+                text-align:center;
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Result page
+        </h1>
+                {% if dataFound == 'Yes'%}
+                {% for ch in output %}
+                {{ch}}
+
+                {% endfor %}
+                <h2>Vowels Count </h2>
+                {{count}}
+                {% else %}
+                <h3>No Data Found</h3>
+
+                {% endif %}
+                <br><a href = '{% url 'homepageurl' %}'>Home </a>
+    </body>
+</html>

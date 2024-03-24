@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <title> Document</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                background-color :chocolate;
+            }
+            #heading{
+                height:10%;
+            }
+            #main{
+                height:90%;
+            }
+            #heading h1{
+                text-align:center;
+                color:red;
+                background-color : silver;
+                
+            }
+            #main h2{
+                text-align:center;
+                position:relative;
+                top:40px;
+                color:aqua;
+            }
+            #main h3 {
+                text-align:center;
+                position:relative;
+                top:40px;
+                color:springgreen;
+            }
+            #box{
+                width:300px;
+                height:120px;
+                text-align:center;
+                position:relative;
+                top:60px;
+                left:528px;
+                background-color:yellow;
+                color:blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id = 'heading'>
+                <h1>Main page</h>
+                </div>
+                <div id = 'main'>
+                    {% block main %}
+                    <h2>main page content </h2><br>
+                    <br><h3>This is how a paragraph in html looks like</h3><br>
+                    {% endblock %}
+                    <div id ='box'>
+                        <br><label for = ''>username</lable><input type = 'text'> <br><br>
+                            <label for = ''>password</lable><input type = 'text'> <br><br>
+                                <input type = 'submit'> 
+
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>

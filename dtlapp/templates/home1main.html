@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color : salmon;
+            }
+            h1{
+                text-align : center;
+                color :yellow;
+            }
+            p{
+                font-family : verdana;
+                font-size : 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Home Page
+        </h1>
+        <div>
+            <form action='{% url 'processurl' %}' method = 'POST'>
+                {%csrf_token%}
+                <p><label for = ''>Enter Some text </label><input type = 'text' name = 't1'></p><br>
+                <input type = 'submit' value = 'Find Vowels'>
+
+            </form>
+        </div>
+    </body>
+</html>

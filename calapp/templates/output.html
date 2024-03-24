@@ -1,0 +1,27 @@
+<html>
+
+    <head>
+        <style>
+            h1{
+                text-align:center;
+                color:blue;
+            }
+            h2{
+                text-align:center;
+                color:blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Output Page</h1>
+        {%if action == 'Addition' %}
+        <h1 style='color:red;'>{{action}} of {{input1}} and {{input2}} is {{result}}</h1>
+        {% elif action == 'Subtraction' %}
+        <h2 style='color:orange;'>{{action}} of {{input1}} and {{input2}} is {{result}}</h2> 
+        {% elif action == 'Division' %}
+        <h1 style='color:blueviolet;'>{{action}} of {{input1}} and {{input2}} is {{result}}</h1>
+        {% else %}
+        <h2 style='color:lightseagreen;'>{{action}} of {{input1}} and {{input2}} is {{result}}</h2> 
+        {% endif %}
+    </body>
+</html>
